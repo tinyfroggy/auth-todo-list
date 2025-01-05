@@ -160,7 +160,7 @@ def register_routes(app, db):
 
         try:
             data = request.get_json()
-            task.task_status = data.get("completed", task.task_status) 
+            task.task_status = data.get("task_status", task.task_status)
             
             db.session.commit()
 
